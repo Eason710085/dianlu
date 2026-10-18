@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>电路图复核工作台 v0.1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="topbar">
+  <div class="brand">电路图复核工作台 <span class="ver">v0.1 · 位图 → 结构化网表（全部本地离线运行）</span></div>
+  <input id="projName" spellcheck="false" title="工程名称">
+  <span class="spacer"></span>
+  <button id="btnDemo" title="载入内置演示工程">演示工程</button>
+  <button id="btnSave" class="primary">保存</button>
+  <button id="btnLoad">恢复</button>
+  <button id="btnImport">导入工程</button>
+  <input type="file" id="fileImport" accept=".json" hidden>
+  <button id="btnExportProj">导出工程</button>
+  <button id="btnExportNet" class="primary">导出网表</button>
+  <button id="btnExportMd">导出MD</button>
+  <button id="btnExportSvg">SVG</button>
+  <button id="btnExportPng">PNG</button>
+</header>
+
+<div id="toolbar">
+  <div class="grp">
+    <button class="toolbtn on" data-tool="select" title="V">选择/移动</button>
+    <button class="toolbtn" data-tool="wire" title="W">连线</button>
+    <button class="toolbtn" data-tool="junction" title="J">连接点</button>
+    <button class="toolbtn" data-tool="label" title="L">网络标签</button>
+    <button class="toolbtn" data-tool="pan" title="拖动/空格">平移</button>
+    <button class="toolbtn" data-tool="markup" title="把元件钉到原图上">标原图</button>
+  </div>
+  <div class="grp">
+    <button id="btnFit" title="F">适应窗口</button>
+    <button id="btnCheckAll">全部确认</button>
+    <button id="btnClearCheck">清除确认</button>
+  </div>
+  <div class="grp" id="palette"></div>
+</div>
+
+<div id="main">
+  <aside id="imgPanel">
+    <div class="panelhead">
+      原图参考
+      <span class="spacer"></span>
+      <button class="mini" id="btnPickImg">载入原图</button>
+      <button class="mini" id="btnImgZoomOut">－</button>
+      <button class="mini" id="btnImgZoomIn">＋</button>
+      <input type="file" id="fileImg" accept="image/*" hidden>
+    </div>
+    <div id="imgWrap"></div>
+    <div class="imgfoot">
+      ① 载入原图 → ② 用「标原图」把每个元件钉到图上 → ③ 在图里逐条核对右边网络表，
+      错了就在画布上改线/改值 → ④ 点「确认」逐项打勾 → ⑤ 导出网表给我。
+    </div>
+  </aside>
+
+  <div id="canvasWrap">
+    <div id="canvasHost"></div>
+    <div class="canvasbadge">滚轮缩放 · 空格/中键拖动 · R 旋转 · M 镜像 · Del 删除 · 双击导线断开</div>
+  </div>
+
+  <aside id="sidePanel">
+    <div id="tabs">
+      <button class="tabbtn" data-tab="props">属性</button>
+      <button class="tabbtn on" data-tab="nets">网络</button>
+      <button class="tabbtn" data-tab="comps">元件</button>
+      <button class="tabbtn" data-tab="erc">检查</button>
+    </div>
+    <div id="panelContent"></div>
+  </aside>
+</div>
+
+<div id="status"></div>
+<div id="toast"></div>
+
+<script src="model.js"></script>
+<script src="render.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

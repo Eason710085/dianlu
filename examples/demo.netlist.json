@@ -1,0 +1,696 @@
+{
+  "meta": {
+    "name": "Demo — 5V 分压采样 + MOSFET 驱动",
+    "created": "2026-10-18 13:45:19",
+    "source": "内置示例：演示「待确认 / 交叉未连接 / 虚拟连接」三种复核场景",
+    "tool": "schematic-bench/0.1",
+    "status": "draft（位图识别 + 人工复核）"
+  },
+  "stats": {
+    "comps": 21,
+    "wires": 17,
+    "nets": 11,
+    "pins": 40,
+    "checkedPins": 21,
+    "checkedNets": 2
+  },
+  "components": [
+    {
+      "ref": "#PWR01",
+      "kind": "vcc",
+      "part": "5V",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "power"
+        }
+      ]
+    },
+    {
+      "ref": "R1",
+      "kind": "res",
+      "part": "10k",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "passive"
+        },
+        {
+          "num": "2",
+          "name": "",
+          "role": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "C1",
+      "kind": "cap",
+      "part": "100nF",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "passive"
+        },
+        {
+          "num": "2",
+          "name": "",
+          "role": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "R2",
+      "kind": "res",
+      "part": "3k3",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "passive"
+        },
+        {
+          "num": "2",
+          "name": "",
+          "role": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "#PWR02",
+      "kind": "gnd",
+      "part": "地 GND",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "power"
+        }
+      ]
+    },
+    {
+      "ref": "#PWR03",
+      "kind": "gnd",
+      "part": "地 GND",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "power"
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "kind": "ic",
+      "part": "MCU-8",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "unknown"
+        },
+        {
+          "num": "2",
+          "name": "",
+          "role": "unknown"
+        },
+        {
+          "num": "3",
+          "name": "",
+          "role": "unknown"
+        },
+        {
+          "num": "4",
+          "name": "",
+          "role": "unknown"
+        },
+        {
+          "num": "8",
+          "name": "",
+          "role": "unknown"
+        },
+        {
+          "num": "7",
+          "name": "",
+          "role": "unknown"
+        },
+        {
+          "num": "6",
+          "name": "",
+          "role": "unknown"
+        },
+        {
+          "num": "5",
+          "name": "",
+          "role": "unknown"
+        }
+      ]
+    },
+    {
+      "ref": "#PWR04",
+      "kind": "vcc",
+      "part": "电源",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "power"
+        }
+      ]
+    },
+    {
+      "ref": "#PWR05",
+      "kind": "gnd",
+      "part": "地 GND",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "power"
+        }
+      ]
+    },
+    {
+      "ref": "J1",
+      "kind": "conn",
+      "part": "CN-4",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "unknown"
+        },
+        {
+          "num": "2",
+          "name": "",
+          "role": "unknown"
+        },
+        {
+          "num": "3",
+          "name": "",
+          "role": "unknown"
+        },
+        {
+          "num": "4",
+          "name": "",
+          "role": "unknown"
+        }
+      ]
+    },
+    {
+      "ref": "#PWR06",
+      "kind": "vcc",
+      "part": "电源",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "power"
+        }
+      ]
+    },
+    {
+      "ref": "#PWR07",
+      "kind": "gnd",
+      "part": "地 GND",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "power"
+        }
+      ]
+    },
+    {
+      "ref": "TP1",
+      "kind": "tp",
+      "part": "TP",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "#PWR08",
+      "kind": "gnd",
+      "part": "地 GND",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "power"
+        }
+      ]
+    },
+    {
+      "ref": "R3",
+      "kind": "res",
+      "part": "100R",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "passive"
+        },
+        {
+          "num": "2",
+          "name": "",
+          "role": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "Q1",
+      "kind": "mos",
+      "part": "NMOS",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "G",
+          "role": "unknown"
+        },
+        {
+          "num": "2",
+          "name": "D",
+          "role": "unknown"
+        },
+        {
+          "num": "3",
+          "name": "S",
+          "role": "out"
+        }
+      ]
+    },
+    {
+      "ref": "R4",
+      "kind": "res",
+      "part": "1k",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "passive"
+        },
+        {
+          "num": "2",
+          "name": "",
+          "role": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "D1",
+      "kind": "led",
+      "part": "LED-R",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "A",
+          "role": "passive"
+        },
+        {
+          "num": "2",
+          "name": "K",
+          "role": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "#PWR09",
+      "kind": "vcc",
+      "part": "电源",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "power"
+        }
+      ]
+    },
+    {
+      "ref": "#PWR10",
+      "kind": "gnd",
+      "part": "地 GND",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "power"
+        }
+      ]
+    },
+    {
+      "ref": "R5",
+      "kind": "res",
+      "part": "10k",
+      "checked": false,
+      "pins": [
+        {
+          "num": "1",
+          "name": "",
+          "role": "passive"
+        },
+        {
+          "num": "2",
+          "name": "",
+          "role": "passive"
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "name": "5V",
+      "names": [
+        "5V"
+      ],
+      "status": "checked",
+      "power": [
+        "5V"
+      ],
+      "hasJunction": false,
+      "virtualLink": false,
+      "members": [
+        "#PWR01.1",
+        "#PWR04.1",
+        "#PWR06.1",
+        "#PWR09.1",
+        "J1.1",
+        "R1.1",
+        "R4.1",
+        "U1.8"
+      ],
+      "labels": []
+    },
+    {
+      "name": "GND",
+      "names": [
+        "GND"
+      ],
+      "status": "checked",
+      "power": [
+        "GND"
+      ],
+      "hasJunction": false,
+      "virtualLink": true,
+      "members": [
+        "#PWR02.1",
+        "#PWR03.1",
+        "#PWR05.1",
+        "#PWR07.1",
+        "#PWR08.1",
+        "#PWR10.1",
+        "C1.2",
+        "J1.2",
+        "Q1.3",
+        "R2.2",
+        "R5.2",
+        "TP1.1",
+        "U1.5"
+      ],
+      "labels": []
+    },
+    {
+      "name": "N_C1-1",
+      "names": [],
+      "status": "unknown",
+      "power": [],
+      "hasJunction": true,
+      "virtualLink": false,
+      "members": [
+        "C1.1",
+        "R1.2",
+        "R2.1",
+        "U1.1"
+      ],
+      "labels": []
+    },
+    {
+      "name": "N_D1-1",
+      "names": [],
+      "status": "unknown",
+      "power": [],
+      "hasJunction": false,
+      "virtualLink": false,
+      "members": [
+        "D1.1",
+        "R4.2"
+      ],
+      "labels": []
+    },
+    {
+      "name": "N_D1-2",
+      "names": [],
+      "status": "unknown",
+      "power": [],
+      "hasJunction": false,
+      "virtualLink": false,
+      "members": [
+        "D1.2",
+        "Q1.2"
+      ],
+      "labels": []
+    },
+    {
+      "name": "N_J1-3",
+      "names": [],
+      "status": "unknown",
+      "power": [],
+      "hasJunction": false,
+      "virtualLink": false,
+      "members": [
+        "J1.3",
+        "U1.7"
+      ],
+      "labels": []
+    },
+    {
+      "name": "N_J1-4",
+      "names": [],
+      "status": "unknown",
+      "power": [],
+      "hasJunction": false,
+      "virtualLink": false,
+      "members": [
+        "J1.4",
+        "U1.4"
+      ],
+      "labels": []
+    },
+    {
+      "name": "N_Q1-1",
+      "names": [],
+      "status": "unknown",
+      "power": [],
+      "hasJunction": false,
+      "virtualLink": true,
+      "members": [
+        "Q1.1",
+        "R3.2",
+        "R5.1"
+      ],
+      "labels": []
+    },
+    {
+      "name": "N_R3-1",
+      "names": [],
+      "status": "unknown",
+      "power": [],
+      "hasJunction": false,
+      "virtualLink": false,
+      "members": [
+        "R3.1",
+        "U1.6"
+      ],
+      "labels": []
+    },
+    {
+      "name": "N_U1-2",
+      "names": [],
+      "status": "unknown",
+      "power": [],
+      "hasJunction": false,
+      "virtualLink": false,
+      "members": [
+        "U1.2"
+      ],
+      "labels": []
+    },
+    {
+      "name": "N_U1-3",
+      "names": [],
+      "status": "unknown",
+      "power": [],
+      "hasJunction": false,
+      "virtualLink": false,
+      "members": [
+        "U1.3"
+      ],
+      "labels": []
+    }
+  ],
+  "links": [
+    {
+      "from": "R5.1",
+      "to": "R3.2",
+      "note": "识别缺失：R5 实为栅极下拉"
+    },
+    {
+      "from": "R5.2",
+      "to": "#PWR10.1",
+      "note": "R5 另一端接 GND"
+    }
+  ],
+  "erc": [
+    {
+      "level": "info",
+      "code": "E10",
+      "msg": "网络 GND 含虚拟连接（图上无走线，靠逻辑声明连接）",
+      "focus": {
+        "type": "net",
+        "name": "GND"
+      }
+    },
+    {
+      "level": "info",
+      "code": "E3",
+      "msg": "网络未命名（自动名 N_C1-1），建议加网络标签",
+      "focus": {
+        "type": "net",
+        "name": "N_C1-1"
+      }
+    },
+    {
+      "level": "info",
+      "code": "E3",
+      "msg": "网络未命名（自动名 N_D1-1），建议加网络标签",
+      "focus": {
+        "type": "net",
+        "name": "N_D1-1"
+      }
+    },
+    {
+      "level": "info",
+      "code": "E3",
+      "msg": "网络未命名（自动名 N_D1-2），建议加网络标签",
+      "focus": {
+        "type": "net",
+        "name": "N_D1-2"
+      }
+    },
+    {
+      "level": "info",
+      "code": "E3",
+      "msg": "网络未命名（自动名 N_J1-3），建议加网络标签",
+      "focus": {
+        "type": "net",
+        "name": "N_J1-3"
+      }
+    },
+    {
+      "level": "info",
+      "code": "E3",
+      "msg": "网络未命名（自动名 N_J1-4），建议加网络标签",
+      "focus": {
+        "type": "net",
+        "name": "N_J1-4"
+      }
+    },
+    {
+      "level": "info",
+      "code": "E3",
+      "msg": "网络未命名（自动名 N_Q1-1），建议加网络标签",
+      "focus": {
+        "type": "net",
+        "name": "N_Q1-1"
+      }
+    },
+    {
+      "level": "info",
+      "code": "E10",
+      "msg": "网络 N_Q1-1 含虚拟连接（图上无走线，靠逻辑声明连接）",
+      "focus": {
+        "type": "net",
+        "name": "N_Q1-1"
+      }
+    },
+    {
+      "level": "info",
+      "code": "E3",
+      "msg": "网络未命名（自动名 N_R3-1），建议加网络标签",
+      "focus": {
+        "type": "net",
+        "name": "N_R3-1"
+      }
+    },
+    {
+      "level": "error",
+      "code": "E1",
+      "msg": "悬空引脚：U1.2 所在网络仅此一个节点",
+      "focus": {
+        "type": "pin",
+        "ref": "U1",
+        "num": "2"
+      }
+    },
+    {
+      "level": "error",
+      "code": "E1",
+      "msg": "悬空引脚：U1.3 所在网络仅此一个节点",
+      "focus": {
+        "type": "pin",
+        "ref": "U1",
+        "num": "3"
+      }
+    },
+    {
+      "level": "warn",
+      "code": "E11",
+      "msg": "十字交叉未加连接点 @(300,200)，已按“不连接”处理——若实际相连请加连接点",
+      "focus": {
+        "type": "xy",
+        "x": 300,
+        "y": 200
+      }
+    },
+    {
+      "level": "info",
+      "code": "E0",
+      "msg": "还有 19 个引脚未人工确认（9 个网络）",
+      "focus": null
+    }
+  ],
+  "review": {
+    "pinsTotal": 40,
+    "pinsChecked": 21,
+    "netsTotal": 11,
+    "netsChecked": 2,
+    "notConnectedPins": []
+  }
+}
